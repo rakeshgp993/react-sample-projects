@@ -57,9 +57,9 @@ jobs:
           name: react-build
           path: build/
 
-      - name: Log in to Docker Hub
+      - name: Log in to Docker Hub ### ACR or ECR
         uses: docker/login-action@v3
-        with:
+        with: #docker hub
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
